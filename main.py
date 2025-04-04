@@ -21,7 +21,7 @@ app.add_middleware(
 )
 
 # Load pre-trained model
-model = YOLO("dates_fruit_model.pt")
+model = YOLO("date_fruit_model.pt")
 
 # Ensure the folder holds images exists
 STATIC_IMAGE_DIR = "static/images"

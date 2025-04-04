@@ -29,7 +29,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # API_URL [Important!]
-API_URL = "http://localhost:8000"
+API_URL = "http://backend:8000"
 
 # Load image
 uploaded_file = st.file_uploader("📤 ارفع صورة التمرة", type=["jpg", "jpeg", "png"])
