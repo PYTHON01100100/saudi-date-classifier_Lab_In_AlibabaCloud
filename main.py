@@ -23,17 +23,16 @@ app.add_middleware(
 # Load pre-trained model
 model = YOLO("date_fruit_model.pt")
 
-# Ensure the folder holds images exists
+# MAKE STATIC IMAGE DIR To allow frontend communicate with backend in order to retrieve image
 STATIC_IMAGE_DIR = "static/images"
 os.makedirs(STATIC_IMAGE_DIR, exist_ok=True)
 
-
-app.mount("/images", StaticFiles(directory=STATIC_IMAGE_DIR), name="images")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to Saudi Date Classifier API"}
+    return {"message": "Welcome to Saudi Date Classifier API MADE BY: Abdulrahman Almejna\nLinkedin: https://www.linkedin.com/in/abdulrahman-almejna-1786b21b4/"}
 
 
 @app.post("/predict")
@@ -74,7 +73,5 @@ async def predict(file: UploadFile = File(...)):
     os.remove(temp_filename)
 
 
-    return {
-        "class": predicted_class,
-        "image_path": f"/images/{output_filename}"
-    }
+    image_url = f"/static/images/{output_filename}"
+    return {"class": predicted_class, "image_url": image_url}
