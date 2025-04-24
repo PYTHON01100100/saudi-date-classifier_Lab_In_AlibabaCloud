@@ -39,8 +39,7 @@ My goal was to learn and experiment with:
 
 ## 🌐 Deployment
 
-This project was successfully deployed and tested on an **ECS instance** using Docker Compose. 
-Although the instance was temporary (~30 mins 😅), it confirmed the project’s cloud readiness and real-world functionality.
+This project was successfully deployed and tested on an **ECS instance** using Docker Compose. it confirmed the project’s cloud readiness and real-world functionality.
 
 > ✅ FastAPI and Streamlit both worked smoothly over the public IP.
 
