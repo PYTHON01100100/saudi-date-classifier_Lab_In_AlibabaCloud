@@ -95,11 +95,9 @@ docker compose up --build
 •	link public IP with port like http://0.0.0.0:8501 #Note be sure docker Container
 ```
 
-## ⚠️ Limitations
-To get the best predictions:
-- 📸 Upload **only one date fruit per image**
-- ☁️ Use a **clean and plain background** (preferably white)
-- 🚫 Avoid distractions (cups, hands, etc.)
+## Acknowledgments
+Special thanks to **[Abdulrahman Almejna](github.com/DH99MJ/saudi-date-classifier)** for his original work on saudi-date-classifier, which served as an inspiration for this project.
+
 - 💡 Ensure good lighting
 
 
