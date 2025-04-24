@@ -1,4 +1,4 @@
-# 🌴 Saudi Date Classifier (YOLOv8 + FastAPI + Streamlit + Docker + AWS)
+# 🌴 Saudi Date Classifier (YOLOv8 + FastAPI + Streamlit + Docker + Alibaba Cloud)
 
 A lightweight and fully containerized **YOLOv8 segmentation-based classifier** to detect and classify Saudi date types using AI.
 
@@ -23,22 +23,23 @@ A lightweight and fully containerized **YOLOv8 segmentation-based classifier** t
 - 🎨 **Streamlit** – Interactive frontend UI  
 - 🐳 **Docker** + **Docker Compose** – Easy containerization & service orchestration  
 - ☁️ **ECS** – Cloud deployment and testing
-- 🪣	 **OSS** – To upload Model to OOS then download it on ecs on root fold  
+- 🪣 **OSS** – To upload Model to OOS then download it on ecs on root fold  
 
 ---
 
 ## 🎯 Project Goal
 My goal was to learn and experiment with:
-- Deploying real segmentation models using **AWS EC2 + Docker**
+- Deploying real segmentation models using **ECS + Docker**
 - Building full-stack AI apps (backend + frontend)
 - Using Docker Compose to coordinate services
-- Validating deployment on cloud environments (AWS)
+- Validating deployment on cloud environments (ECS)
+- Training on Alibaba cloud platform
 
 ---
 
 ## 🌐 Deployment
 
-This project was successfully deployed and tested on an **AWS EC2 instance** using Docker Compose.  
+This project was successfully deployed and tested on an **ECS instance** using Docker Compose. 
 Although the instance was temporary (~30 mins 😅), it confirmed the project’s cloud readiness and real-world functionality.
 
 > ✅ FastAPI and Streamlit both worked smoothly over the public IP.
@@ -71,9 +72,14 @@ To get the best predictions:
 
 ---
 
-## 📦 Running the Project (Docker)
+## 📦 Running the Project (Docker) ON ECS
 
 ```bash
+BEFORE:
+- upload Model on OSS
+-Create an ECS Instance
+-Install Docker on ECS and verify it works
+-
 # 1. Clone the repo
 git clone https://github.com/DH99MJ/saudi-date-classifier.git
 cd saudi-date-classifier
@@ -81,6 +87,20 @@ cd saudi-date-classifier
 # 2. Build & run using Docker Compose
 docker compose up --build
 
-# 3. Run <3
-•	🎯 Frontend: http://localhost:8501
-•	🧠 Backend: http://localhost:8000/docs
+
+# 3. CTRL+C when it's installed
+•	docker ps -a # to run it
+•	take port from URL: http://0.0.0.0:8501
+•	in Security Group you have to add rule 8501
+•	link public IP with port like http://0.0.0.0:8501 #Note be sure docker Container
+```
+
+## ⚠️ Limitations
+To get the best predictions:
+- 📸 Upload **only one date fruit per image**
+- ☁️ Use a **clean and plain background** (preferably white)
+- 🚫 Avoid distractions (cups, hands, etc.)
+- 💡 Ensure good lighting
+
+
+
