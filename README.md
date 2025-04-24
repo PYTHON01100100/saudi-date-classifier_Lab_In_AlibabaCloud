@@ -98,7 +98,5 @@ docker compose up --build
 ## Acknowledgments
 Special thanks to **[Abdulrahman Almejna](github.com/DH99MJ/saudi-date-classifier)** for his original work on saudi-date-classifier, which served as an inspiration for this project.
 
-- 💡 Ensure good lighting
-
 
 
