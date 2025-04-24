@@ -26,8 +26,11 @@ st.markdown("""
 - 🚫 تجنب خلط التمر مع فنجان قهوة أو أشياء ثانية
 
 ---
-Done By: Abdulrahman Almejna
+Original work By: Abdulrahman Almejna
 Linkedin: https://www.linkedin.com/in/abdulrahman-almejna-1786b21b4/
+Test On Alibaba cloud ECS : Abdulrahman Almyman
+Linkedin: https://www.linkedin.com/in/abdulrahmanalmyman/
+
 """, unsafe_allow_html=True)
 
 
