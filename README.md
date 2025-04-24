@@ -22,7 +22,8 @@ A lightweight and fully containerized **YOLOv8 segmentation-based classifier** t
 - ⚡ **FastAPI** – Backend API for model prediction  
 - 🎨 **Streamlit** – Interactive frontend UI  
 - 🐳 **Docker** + **Docker Compose** – Easy containerization & service orchestration  
-- ☁️ **AWS EC2** – Cloud deployment and testing  
+- ☁️ **ECS** – Cloud deployment and testing
+- 🪣	 **OSS** – To upload Model to OOS then download it on ecs on root fold  
 
 ---
 
